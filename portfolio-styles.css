@@ -55,7 +55,7 @@ header a:hover{
 /*the welcome section styles*/
 
 section#welcome-section{
-    background: center / cover no-repeat url(walter_iznik.jpg);
+    background: center / cover no-repeat url(assets/walter_iznik.jpg);
     height: 100vh;
     text-align: center;
     display:flex;
