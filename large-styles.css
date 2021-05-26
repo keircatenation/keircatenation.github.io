@@ -1,0 +1,38 @@
+/*collapsible menu styles*/
+
+header{
+    flex-direction: row;
+    padding:1rem 1.5rem;
+    align-content: center;
+    justify-content: space-between;
+}
+header label{
+    display:none;
+}
+#home-link{
+    display: block;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+.collapsible-menu{
+    max-height:100%;
+    width:50%;
+    justify-content: space-between;
+}
+.collapsible-menu ul{
+    margin:0;
+}
+
+
+/*main page styles*/
+
+section#welcome-section h1{
+    font-size: 1.5rem;
+}
+
+section#projects{
+    grid-template-columns: 1fr 1fr;
+}
+section#projects h2{
+    grid-column: span 2;
+}

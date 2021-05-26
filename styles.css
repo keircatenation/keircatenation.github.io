@@ -21,26 +21,54 @@ header{
     right:0;
     left:0;
     top:0;
-    background:rgba(153, 47, 96,.5);
-    padding:1rem;
+    background:rgba(153, 47, 96,.7);
     display:flex;
-    justify-content: space-between;
+    flex-direction: column;
+    padding: 0 .75rem;
 }
 .scrolled{
     box-shadow: 0px 0 .2rem 0 var(--dark-primary);
     border-bottom:1px solid var(--dark-primary);
     background-color: var(--primary);
 }
-header > svg{
-    fill:var(--secondary);
-    max-width: 125px;
+header label{
+    display:block;
+    cursor: pointer;
+    background: url(assets/menu-icon.png) no-repeat center left;
+    color:var(--secondary);
+    flex-shrink:0;
+    padding:1rem 0 1rem 2.5rem;
+    font-weight: 700;
 }
+
+/*the collapsible menu bit*/
+input#menu{
+    display: none;
+}
+input:checked +label{
+    background-image:url(assets/close-icon-01.png);
+    border-bottom:1px solid var(--dark-secondary);
+}
+.collapsible-menu{
+    max-height:0;
+    overflow:hidden;
+    margin:0;
+}
+input:checked ~ .collapsible-menu{
+    max-height:100%;
+    padding-bottom:1rem;
+}
+#home-link{
+    display: none;
+}
+
+/*styling the menu*/
 header ul{
     list-style: none;
     display:flex;
-}
-header li{
-    margin-left:1.5rem;
+    padding:0;
+    justify-content: space-around;
+    margin-bottom:0;
 }
 header a{
     text-decoration: none;
@@ -71,9 +99,14 @@ section#welcome-section svg{
     width:60vw;
     max-width:1000px;
 }
+section#welcome-section h1{
+    color:var(--secondary);
+    font-size: 1rem;
+    font-style: italic;
+}
 section#welcome-section p{
     max-width:800px;
-    margin: 2rem auto 0;
+    margin: 1rem auto 0;
     color:white;
     font-size:clamp(.8rem, 2vw, 1rem);
     line-height: 1.5rem;
@@ -85,9 +118,14 @@ section#projects{
     max-width: 1020px;
     margin:0 auto;
     display:grid;
+    grid-gap:1rem;
+    padding:.75rem;
+}
+section h2{
+    margin:2rem 0 .5rem;
+    color: var(--primary);
 }
 .project-tile{
-    margin:.5rem;
     border:2px solid var(--primary);
     border-radius: .5rem;
     overflow: hidden;
@@ -96,6 +134,7 @@ section#projects{
 .project-tile img{
     object-fit:cover;
     max-width: 100%;
+    border-bottom:1px solid var(--primary);
 }
 .project-text{
     margin:1rem;
@@ -104,7 +143,7 @@ section#projects{
     grid-gap:.5rem;
     align-items: center;
 }
-.project-text h2{
+.project-text h3{
     grid-area:name;
     margin:0;
     font-size: 1.25rem;
