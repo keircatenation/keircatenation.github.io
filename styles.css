@@ -85,18 +85,27 @@ header a:hover{
 /*the welcome section styles*/
 
 section#welcome-section{
-    background: center / cover no-repeat url(assets/walter_iznik.jpg);
+    background: var(--primary);
     height: 100vh;
     text-align: center;
     display:flex;
     align-items: center;
     margin:0;
     max-width: 100%;
+    overflow: hidden;
+}
+#welcome-section img{
+    min-height:100vh;
+    width:100vw;
+    object-fit: cover;
 }
 #welcome-section #welcome-text{
     background:rgba(153, 47, 96, .9);
     margin:0 auto;
     padding:2rem;
+    position:absolute;
+    left:10%;
+    right:10%;
 }
 section#welcome-section svg{
     fill:var(--secondary);
@@ -151,6 +160,7 @@ section img{
 }
 .project-tile > img{
     border-bottom:1px solid var(--primary);
+    width:100%;
 }
 .project-text{
     margin:1rem;
@@ -242,19 +252,23 @@ input[type="submit"]:hover{
 }
 .media-links{
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     align-content: center;
     grid-area:icons;
     align-self: center;
+    flex-wrap: wrap;
 }
 .media-links a{
     color:var(--secondary);
     background-color: var(--primary);
-    padding:.5rem 0;
+    padding:.5rem .75rem;
     text-align: center;
-    border-radius: .5rem;
-    width:3rem;
+    border-radius: .25rem;
     border:1px solid var(--primary);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .9rem;
+    margin:.5rem;
 }
 .media-links a:hover{
     color:var(--primary);
@@ -265,6 +279,7 @@ input[type="submit"]:hover{
         display:none;
     }
 }
+
 
 footer{
     background: var(--primary);
