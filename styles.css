@@ -36,7 +36,7 @@ header{
 header label{
     display:block;
     cursor: pointer;
-    background: url(assets/menu-icon.png) no-repeat center left;
+    background: url(https://keircatenation.github.io/assets/menu-icon.png) no-repeat center left;
     color:var(--secondary);
     flex-shrink:0;
     padding:1rem 0 1rem 2.5rem;
