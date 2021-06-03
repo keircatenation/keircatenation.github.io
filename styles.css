@@ -98,6 +98,7 @@ section#welcome-section{
     min-height:100vh;
     width:100vw;
     object-fit: cover;
+    filter: blur(5px);
 }
 #welcome-section #welcome-text{
     background:rgba(153, 47, 96, .9);
